@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>
+    <div className="animate-fadeInUp">
       <p className="text-base text-gray-500">
         ¡Hola! Soy un joven desarrollador web apasionado por el open source. Me
         encanta crear soluciones innovadoras y colaborar en proyectos
