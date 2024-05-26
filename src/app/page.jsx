@@ -63,20 +63,8 @@ function Content() {
             }`}
           ></span>
         </button>
-        <button
-          onClick={() => handleTabClick("uses")}
-          className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
-            tab === "uses" ? "text-white" : "text-gray-500 hover:text-gray-900"
-          }`}
-        >
-          <span className="relative z-10">Uses</span>
-          <span
-            className={`absolute inset-0 z-0 rounded-md ${
-              tab === "uses" ? "bg-gray-900" : ""
-            }`}
-          ></span>
-        </button>
-        <button
+
+        {/* <button
           onClick={() => handleTabClick("newsletter")}
           className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
             tab === "newsletter"
@@ -90,7 +78,7 @@ function Content() {
               tab === "newsletter" ? "bg-gray-900" : ""
             }`}
           ></span>
-        </button>
+        </button> */}
         <button
           onClick={() => handleTabClick("contact")}
           className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
@@ -131,9 +119,7 @@ export default function Home() {
           <h1 className="font-medium text-gray-900 mt-2 text-lg">
             Abel Falcón Espino
           </h1>
-          <p className="text-gray-500 text-base">
-            Web Developer &amp; Freelancer
-          </p>
+          <p className="text-gray-500 text-base">Web Developer</p>
           <div className="flex flex-row justify-between items-center mt-6">
             <div className="flex flex-row gap-x-3">
               <a
@@ -141,17 +127,26 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Twitter size={14} className="transparent-icon" />
+                <Twitter
+                  size={18}
+                  className="transparent-icon hover:text-purple-400"
+                />
               </a>
               <a href="/" target="_blank" rel="noreferrer">
-                <Linkedin size={14} className="transparent-icon" />
+                <Linkedin
+                  size={18}
+                  className="transparent-icon hover:text-red-400"
+                />
               </a>
               <a
                 href="https://www.github.com/AbelFalcon/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Github size={14} className="transparent-icon" />
+                <Github
+                  size={18}
+                  className="transparent-icon hover:text-blue-400"
+                />
               </a>
             </div>
           </div>
