@@ -51,12 +51,12 @@ const About = () => {
 
         <h1 className="font-medium text-gray-900 mb-4 text-lg">Proyectos</h1>
 
-        <article className="pb-5 group">
+        <article className="flex flex-col gap-4 pb-5 group">
           <article
             onClick={() =>
               handleArticleClick("https://github.com/AbelFalcon/CRUD-JS")
             }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300 border-purple-400/50 hover:border-2"
+            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
           >
             <div className="flex items-center gap-5">
               <User className="w-12 h-12 text-gray-700 rounded-full p-2" />
@@ -80,7 +80,7 @@ const About = () => {
             onClick={() =>
               handleArticleClick("https://github.com/AbelFalcon/Spotter")
             }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300 border-purple-400/50 hover:border-2"
+            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
           >
             <div className="flex items-center gap-5">
               <Pill className="w-12 h-12 text-gray-700 rounded-full p-2" />
@@ -98,7 +98,7 @@ const About = () => {
             onClick={() =>
               handleArticleClick("https://github.com/AbelFalcon/Youp")
             }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300 border-purple-400/50 hover:border-2"
+            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
           >
             <div className="flex items-center gap-5">
               <Youtube className="w-12 h-12 text-gray-700 rounded-full p-2" />
@@ -116,7 +116,7 @@ const About = () => {
             onClick={() =>
               handleArticleClick("https://github.com/AbelFalcon/CRUD-JS")
             }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300 border-purple-400/50 hover:border-2"
+            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
           >
             <div className="flex items-center gap-5">
               <Braces className="w-12 h-12 text-gray-700 rounded-full p-2" />
