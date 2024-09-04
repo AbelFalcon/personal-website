@@ -49,92 +49,59 @@ const About = () => {
 
         <div className="border-b w-full my-8"></div>
 
-        <h1 className="font-medium text-gray-900 mb-4 text-lg">Proyectos</h1>
+        <h1 className="font-medium text-gray-900 mb-6 text-2xl">Proyectos</h1>
 
-        <article className="flex flex-col gap-4 pb-5 group">
-          <article
-            onClick={() =>
-              handleArticleClick("https://github.com/AbelFalcon/CRUD-JS")
-            }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
-          >
-            <div className="flex items-center gap-5">
-              <User className="w-12 h-12 text-gray-700 rounded-full p-2" />
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">
-                  Personal-Website
-                </h2>
-                <p className="text-sm text-gray-700">
-                  Sitio web personal.
-                  <b className="opacity-80">
-                    <a className="text-purple-400">React</a> | Suspense,
-                    useState, useEffect. <a className="text-purple-400">Next</a>{" "}
-                    | useSearchParams, useRouter
-                  </b>
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Personal-Website",
+              description: "Sitio web personal.",
+              tech: "React | Suspense, useState, useEffect. Next | useSearchParams, useRouter",
+              icon: <User className="w-10 h-10 text-purple-500" />,
+              url: "https://github.com/AbelFalcon/CRUD-JS",
+            },
+            {
+              title: "Spotter",
+              description: "Script que monitorea fragmento HTML específico cada 10 minutos.",
+              tech: "Web Scraping",
+              icon: <Pill className="w-10 h-10 text-green-500" />,
+              url: "https://github.com/AbelFalcon/Spotter",
+            },
+            {
+              title: "Youp",
+              description: "🧩 Búsqueda rápida en YouTube con un clic derecho.",
+              tech: "Extensión de Google Chrome",
+              icon: <Youtube className="w-10 h-10 text-red-500" />,
+              url: "https://github.com/AbelFalcon/Youp",
+            },
+            {
+              title: "Crud-JS",
+              description: "Crea una base de datos. Muestra, edita y elimina productos con una interfaz web.",
+              tech: "REST API",
+              icon: <Braces className="w-10 h-10 text-blue-500" />,
+              url: "https://github.com/AbelFalcon/CRUD-JS",
+            },
+          ].map((project, index) => (
+            <article
+              key={index}
+              onClick={() => handleArticleClick(project.url)}
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer transform hover:-translate-y-1"
+            >
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  {project.icon}
+                  <h2 className="text-xl font-bold text-gray-900">{project.title}</h2>
+                </div>
+                <p className="text-sm text-gray-600 mb-2">{project.description}</p>
+                <p className="text-xs font-semibold text-purple-600">{project.tech}</p>
               </div>
-            </div>
-          </article>
+            </article>
+          ))}
+        </div>
 
-          <article
-            onClick={() =>
-              handleArticleClick("https://github.com/AbelFalcon/Spotter")
-            }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
-          >
-            <div className="flex items-center gap-5">
-              <Pill className="w-12 h-12 text-gray-700 rounded-full p-2" />
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">Spotter</h2>
-                <p className="text-sm text-gray-700">
-                  Script que monitorea fragmento HTML especifico cada 10
-                  minutos. <b className="opacity-80">Web Scraping</b>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            onClick={() =>
-              handleArticleClick("https://github.com/AbelFalcon/Youp")
-            }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
-          >
-            <div className="flex items-center gap-5">
-              <Youtube className="w-12 h-12 text-gray-700 rounded-full p-2" />
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">Youp</h2>
-                <p className="text-sm text-gray-700">
-                  🧩 Búsqueda rápida en YouTube con un clic derecho.{" "}
-                  <b className="opacity-80">Extension de Google Chrome</b>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            onClick={() =>
-              handleArticleClick("https://github.com/AbelFalcon/CRUD-JS")
-            }
-            className="w-full py-6 bg-gray-100 px-6 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-300 border-purple-400/50 border-2"
-          >
-            <div className="flex items-center gap-5">
-              <Braces className="w-12 h-12 text-gray-700 rounded-full p-2" />
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">Crud-JS</h2>
-                <p className="text-sm text-gray-700">
-                  Crea una base de datos. Muestra, edita y elimina productos con
-                  una interfaz web.
-                  <b className="opacity-80">REST API.</b>
-                </p>
-              </div>
-            </div>
-          </article>
-        </article>
-
-        <p className="text-center italic font-extralight">
-          Puedes ver mas proyectos en{" "}
-          <a href="https://github.com/AbelFalcon/" target="_blank">
+        <p className="text-center italic font-light mt-8 text-gray-600">
+          Puedes ver más proyectos en{" "}
+          <a href="https://github.com/AbelFalcon/" target="_blank" className="text-purple-600 hover:underline">
             mi perfil de Github
           </a>
         </p>
@@ -144,4 +111,3 @@ const About = () => {
 };
 
 export default About;
-14;

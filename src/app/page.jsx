@@ -7,6 +7,7 @@ import { Twitter, Linkedin, Github } from "lucide-react";
 import profilePic from "./images/avatar.jpeg";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Blogs from "./pages/blogs";
 import { useSearchParams, useRouter } from "next/navigation";
 
 function Content() {
@@ -29,6 +30,8 @@ function Content() {
         return <About />;
       case "contact":
         return <Contact />;
+      case "blog":
+        return <Blogs />;
       default:
         return <p>Ups, de momento no tengo nada que mostrar.</p>;
     }
@@ -79,6 +82,7 @@ function Content() {
             }`}
           ></span>
         </button> */}
+
         <button
           onClick={() => handleTabClick("contact")}
           className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
