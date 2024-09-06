@@ -67,22 +67,6 @@ function Content() {
           ></span>
         </button>
 
-        {/* <button
-          onClick={() => handleTabClick("newsletter")}
-          className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
-            tab === "newsletter"
-              ? "text-white"
-              : "text-gray-500 hover:text-gray-900"
-          }`}
-        >
-          <span className="relative z-10">Newsletter</span>
-          <span
-            className={`absolute inset-0 z-0 rounded-md ${
-              tab === "newsletter" ? "bg-gray-900" : ""
-            }`}
-          ></span>
-        </button> */}
-
         <button
           onClick={() => handleTabClick("contact")}
           className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
