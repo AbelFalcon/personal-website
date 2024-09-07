@@ -27,6 +27,14 @@ body {
 }
 
 html.dark body {
-  background-color: rgb(30, 2, 2);
-  color: white;
+  background-color: #1a1c1d;
+  & h1 {
+    color: white;
+  }
+  & p {
+    color: white;
+  }
+  & h3 {
+    color: white;
+  }
 }
