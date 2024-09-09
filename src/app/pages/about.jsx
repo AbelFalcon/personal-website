@@ -52,7 +52,7 @@ const projectsData = [
     title: "Youp",
     description: "🧩 Búsqueda rápida en YouTube con un clic derecho.",
     tech: "Extensión de Google Chrome",
-    icon: <Youtube className="w-6 h-6 text-purple-600" />,
+    icon: <Youtube className="w-6 h-6 text-purple-600" color="black" />,
     url: "https://github.com/AbelFalcon/Youp",
   },
   {
@@ -89,31 +89,33 @@ const About = () => {
         ¡Hey! Soy un desarrollador web de 25 años de Las Palmas de Gran Canaria. Me encanta tanto el backend como el frontend, y disfruto contribuyendo a proyectos de código abierto. Cuando no estoy codificando, me encontrarás viajando y descubriendo nuevos lugares. Siempre en busca de aprender algo nuevo y mejorar en el mundo del desarrollo de software. 🚀🌍
       </p>
 
+     <div className="border-b w-full my-8"></div>
+
       <div className="mt-16">
         <h1 className="font-medium text-gray-900 mb-6 text-2xl flex items-center">
           <Briefcase className="w-6 h-6 mr-2 text-purple-600" />
           Experiencia
         </h1>
-        <ol className="relative border-l border-gray-300 ml-3">
+        <ol className="relative border-l border-gray-600 dark:border-gray-700 ml-3">
           {experienceData.map((job, index) => (
             <li key={index} className="mb-10 ml-6">
-              <span className={`absolute flex items-center justify-center w-6 h-6 bg-${job.statusColor}-100 rounded-full -left-3 ring-8 ring-white`}>
-                <svg className={`w-2.5 h-2.5 text-${job.statusColor}-500`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1h-2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+              <span className={`absolute flex items-center justify-center w-6 h-6 bg-purple-200 dark:bg-purple-900 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900`}>
+                <svg className="w-2.5 h-2.5 text-purple-600 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1h-2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                 </svg>
               </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
+              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-gray-100">
                 {job.title}
                 {job.status === "Actual" && (
-                  <span className="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
+                  <span className="bg-purple-200 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
                     {job.status}
                   </span>
                 )}
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
                 {job.date}
               </time>
-              <p className="mb-4 text-base font-normal text-gray-500">
+              <p className="mb-4 text-base font-normal text-gray-600 dark:text-gray-300">
                 {job.company}
               </p>
             </li>
@@ -135,7 +137,7 @@ const About = () => {
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer flex flex-col justify-between border border-purple-100"
             >
               <div className="p-4">
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-4 mb-2">
                   {project.icon}
                   <h2 className="text-lg font-semibold text-gray-900 truncate">{project.title}</h2>
                 </div>
@@ -148,7 +150,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="border-b w-full my-8"></div>
+        <div className="line border-b w-full my-8"></div>
 
         <h1 className="font-medium text-gray-900 mb-6 text-2xl flex items-center">
           <FolderOpenDot className="w-6 h-6 mr-2 text-purple-600" />
@@ -162,9 +164,9 @@ const About = () => {
                 <Image
                   src={tech.src}
                   alt={tech.name}
-                  layout="fill"
-                  objectFit="contain"
-                  className="sm:filter sm:brightness-75 sm:contrast-75 sm:group-hover:brightness-100 sm:group-hover:contrast-100 transition-all duration-300"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-contain sm:filter sm:brightness-75 sm:contrast-75 sm:group-hover:brightness-100 sm:group-hover:contrast-100 transition-all duration-300"
                 />
               </div>
               <p className="text-xs text-gray-600 text-center sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">

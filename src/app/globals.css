@@ -6,18 +6,27 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --text-primary: #1a1c1d;
+  --text-secondary: #4a4c4d;
+  --background-light: hsl(0, 0%, 97%);
+  --background-dark: #1a1c1d;
+  --purple-light: #8b5cf6;
+  --purple-dark: #7c3aed;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 26, 28, 29;
+    --background-end-rgb: 26, 28, 29;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
   }
 }
 
 body {
-  background-color: HSL(0, 0%, 97%);
+  background-color: var(--background-light);
+  color: var(--text-primary);
 }
 
 @layer utilities {
@@ -27,14 +36,49 @@ body {
 }
 
 html.dark body {
-  background-color: #1a1c1d;
-  & h1 {
-    color: white;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+}
+
+html.dark {
+  & body {
+    background-color: #121212;
   }
-  & p {
-    color: white;
+
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    color: #e2e8f0;
   }
-  & h3 {
-    color: white;
+
+  & p, & span, & a, & li {
+    color: #a0aec0;
   }
+
+  & .text-gray-500, & .text-gray-600 {
+    color: #718096;
+  }
+
+  & .text-gray-900 {
+    color: #e2e8f0;
+  }
+
+  & .bg-white {
+    background-color: #1e1e1e;
+  }
+
+  & .border-purple-100 {
+    border-color: #4a1d96;
+  }
+
+  & .bg-purple-50 {
+    background-color: #2d1d4d;
+  }
+
+  & .text-purple-600 {
+    color: #9f7aea;
+  }
+
+  & .border-b {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
 }
