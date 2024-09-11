@@ -49,7 +49,7 @@ function Content() {
           <span className="relative z-10">Sobre mi</span>
           <span
             className={`absolute inset-0 z-0 rounded-md ${
-              tab === "about" ? "bg-gray-900" : ""
+              tab === "about" ? "bg-purple-900" : ""
             }`}
           ></span>
         </button>
@@ -62,7 +62,7 @@ function Content() {
           <span className="relative z-10">Blogs</span>
           <span
             className={`absolute inset-0 z-0 rounded-md ${
-              tab === "blog" ? "bg-gray-900" : ""
+              tab === "blog" ? "bg-purple-900" : ""
             }`}
           ></span>
         </button>
@@ -72,13 +72,13 @@ function Content() {
           className={`text-sm transition-colors px-2 py-1 rounded-md relative ${
             tab === "contact"
               ? "text-white"
-              : "text-gray-500 hover:text-gray-900"
+              : "text-purple-500 hover:text-gray-900"
           }`}
         >
           <span className="relative z-10">Contacto</span>
           <span
             className={`absolute inset-0 z-0 rounded-md ${
-              tab === "contact" ? "bg-gray-900" : ""
+              tab === "contact" ? "bg-purple-900" : ""
             }`}
           ></span>
         </button>

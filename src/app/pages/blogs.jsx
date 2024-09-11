@@ -9,7 +9,7 @@ const Blogs = () => {
           Blog
         </h2>
 
-        <div className="bg-gray-100 border-l-4 border-purple-500 p-4 rounded-r-lg">
+        <div className="Quote bg-gray-100 border-l-4 border-purple-500 p-4 rounded-r-lg">
           <p className="text-gray-700 font-medium">
             ¡Próximamente!
           </p>
