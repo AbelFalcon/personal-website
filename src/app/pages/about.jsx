@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { BusFront } from "lucide-react";
 import { Pill, Youtube, Braces, User, Briefcase, FolderOpenDot } from "lucide-react"
 import Image from 'next/image'
 
@@ -34,6 +35,13 @@ const experienceData = [
 ]
 
 const projectsData = [
+  {
+    title: "TuParada",
+    description: "🚍 Consulta las paradas de Guaguas de LPGC ",
+    tech: "Astro, TypeScript",
+    icon: <BusFront className="w-6 h-6 text-purple-600" />,
+    url: "https://github.com/Vicente015/tuparada",
+  },
   {
     title: "Personal-Website",
     description: "Sitio web personal.",
@@ -134,17 +142,24 @@ const About = () => {
             <article
               key={index}
               onClick={() => handleArticleClick(project.url)}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer flex flex-col justify-between border border-purple-100"
+              className={`bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer flex flex-col justify-between ${
+                project.highlight ? 'relative p-[2px]' : 'border border-purple-100'
+              }`}
             >
-              <div className="p-4">
-                <div className="flex items-center gap-4 mb-2">
-                  {project.icon}
-                  <h2 className="text-lg font-semibold text-gray-900 truncate">{project.title}</h2>
+              {project.highlight && (
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 dark:from-purple-700 dark:via-pink-600 dark:to-purple-700 rounded-lg animate-border-move"></div>
+              )}
+              <div className={`bg-white dark:bg-gray-800 rounded-lg flex flex-col justify-between h-full ${project.highlight ? 'relative z-10' : ''}`}>
+                <div className="p-4">
+                  <div className="flex items-center gap-4 mb-2">
+                    {project.icon}
+                    <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 truncate">{project.title}</h2>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-2 line-clamp-2">{project.description}</p>
                 </div>
-                <p className="text-sm text-gray-600 mb-2 line-clamp-2">{project.description}</p>
-              </div>
-              <div className="bg-purple-50 px-4 py-2 mt-auto">
-                <p className="text-xs font-medium text-purple-600">{project.tech}</p>
+                <div className="bg-purple-50 dark:bg-purple-900 px-4 py-2 mt-auto">
+                  <p className="text-xs font-medium text-purple-600 dark:text-purple-300">{project.tech}</p>
+                </div>
               </div>
             </article>
           ))}

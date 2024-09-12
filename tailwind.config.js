@@ -14,12 +14,17 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        'fadeInUp': 'animate-fadeInUp',
+        'fadeInUp': 'fadeInUp 0.5s ease-out',
+        'border-move': 'border-move 3s ease infinite',
       },
       keyframes: {
         'fadeInUp': {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'border-move': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
       variants: {
