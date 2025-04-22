@@ -6,7 +6,7 @@ import Image from 'next/image'
 const experienceData = [
   {
     title: "Especialista en TI",
-    company: "Instituto Nacional de la Seguridad Social (INSS)",
+    company: "GPIC - Proyecto Administración publica",
     date: "Julio 2024 - Presente",
     status: "Actual",
     statusColor: "purple",
