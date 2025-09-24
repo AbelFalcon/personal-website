@@ -1,4 +1,4 @@
-import { Mail, Twitter, Github } from "lucide-react"
+import { Github, Mail } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -19,10 +19,6 @@ const Contact = () => {
             contacto@abelfalcon.com
           </a>
 
-          <a href="https://x.com/Saxboiii" target="_blank" rel="noreferrer" className="flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-300">
-            <Twitter className="h-5 w-5 mr-3" />
-            @Saxboiii
-          </a>
 
           <a href="https://github.com/AbelFalcon" target="_blank" rel="noreferrer" className="flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-300">
             <Github className="h-5 w-5 mr-3" />
